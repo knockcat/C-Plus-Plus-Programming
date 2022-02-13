@@ -41,7 +41,7 @@ void printDFS(int **edges, int n, int sv, bool *visited)
 
 void DFS(int **edges, int n)
 {
-    bool *visited = new bool[n];
+    bool *visited = new bool[n]; // visited array
 
     for (int i = 0; i < n; ++i)
         visited[i] = false;
@@ -83,7 +83,7 @@ void printBFS(int **edges, int n, int sv, bool *visited)
 
 void BFS(int **edges, int n)
 {
-    bool *visited = new bool[n];
+    bool *visited = new bool[n]; // visited array
 
     for (int i = 0; i < n; ++i)
         visited[i] = false;
@@ -119,8 +119,8 @@ int main()
     {
         int f, s; // first vertex second vertex
         cout << "Enter edge from first vertex to second vertex " << endl;
-
         cin >> f >> s;
+
         edges[f][s] = 1;
         edges[s][f] = 1;
     }
@@ -143,3 +143,40 @@ int main()
 
     return 0;
 }
+
+/*
+
+OUTPUT
+
+PS E:\DOCUMENTS\C-Plus-Plus-Programming\Graph> cd "e:\DOCUMENTS\C-Plus-Plus-Programming\Graph\" ; if ($?) { g++ BFS_DFS__Disconnected_Graph.cpp -o BFS_DFS__Disconnected_Graph } ; if ($?) { .\BFS_DFS__Disconnected_Graph }
+Enter number of vertices & edges :
+14 11
+Enter edge from first vertex to second vertex
+0 4
+Enter edge from first vertex to second vertex
+0 5
+Enter edge from first vertex to second vertex
+4 3
+Enter edge from first vertex to second vertex
+5 6
+Enter edge from first vertex to second vertex
+3 2
+Enter edge from first vertex to second vertex
+3 1
+Enter edge from first vertex to second vertex
+6 7
+Enter edge from first vertex to second vertex
+8 9
+Enter edge from first vertex to second vertex
+8 10
+Enter edge from first vertex to second vertex
+9 11
+Enter edge from first vertex to second vertex
+12 13
+DFS
+0 4 3 1 2 5 6 7 8 9 11 10 12 13
+BFS
+0 4 5 3 6 1 2 7 8 9 10 11 12 13
+PS E:\DOCUMENTS\C-Plus-Plus-Programming\Graph>
+
+*/
