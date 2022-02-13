@@ -83,6 +83,11 @@ int main()
 
     delete[] visited; // free memory
 
+    for (int i = 0; i < n; ++i)
+        delete[] edges[i];
+
+    delete[] edges;
+
     return 0;
 }
 
