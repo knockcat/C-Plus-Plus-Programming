@@ -77,6 +77,16 @@ int main()
         cout << "\nThere is a path from " << u << " to " << v;
     else
         cout << "\nThere is no path from " << u << " to " << v;
+
+    // deleting memory
+    for (int i = 0; i < n; ++i)
+        delete[] edges[i];
+
+    delete[] edges;
+
+    delete[] visited;
+
+    return 0;
 }
 
 /*
